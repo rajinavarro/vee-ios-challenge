@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F36FDFE8-6722-4050-B8DA-0E209F42D6EA"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D280475-912E-4BC6-BA79-0E89122FAE3A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "vee-ios-challenge/ViewModels/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getHeroes(offset:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9D280475-912E-4BC6-BA79-0E89122FAE3A - 8a80d8554ffd86ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "vee_ios_challenge.HomeViewModel.getHeroes() -&gt; ()"
+                  moduleName = "vee-ios-challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajinavarro/Documents/Projetos/vee-ios-challenge/vee-ios-challenge/ViewModels/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1991">
+               </Location>
+               <Location
+                  uuid = "9D280475-912E-4BC6-BA79-0E89122FAE3A - 2c0d3e1d3181f094"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in vee_ios_challenge.HomeViewModel.getHeroes() -&gt; ()"
+                  moduleName = "vee-ios-challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajinavarro/Documents/Projetos/vee-ios-challenge/vee-ios-challenge/ViewModels/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "219">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "552729B4-451C-4821-9409-72CCE91C54F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "vee-ios-challenge/Views/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66A04548-E57F-469F-81ED-5C0D8A5C4E4A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "vee-ios-challenge/Utils/Managers/RequestsManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "makeRequest(to:method:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
