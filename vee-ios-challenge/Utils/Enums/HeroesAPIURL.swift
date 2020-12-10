@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum HeroesAPIURL: String {
+    case getHeroes = "https://gateway.marvel.com:443/v1/public/characters"
+}
