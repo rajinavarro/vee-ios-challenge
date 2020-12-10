@@ -15,6 +15,8 @@
 		AFA60FE725827BA5004B229D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA60FE525827BA5004B229D /* LaunchScreen.storyboard */; };
 		AFA60FF225827BA5004B229D /* vee_ios_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA60FF125827BA5004B229D /* vee_ios_challengeTests.swift */; };
 		AFA60FFD25827BA5004B229D /* vee_ios_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA60FFC25827BA5004B229D /* vee_ios_challengeUITests.swift */; };
+		AFA6101A25827D57004B229D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6101925827D57004B229D /* ApiManager.swift */; };
+		AFA6102425827E32004B229D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6102325827E31004B229D /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		AFA60FF825827BA5004B229D /* vee-ios-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "vee-ios-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA60FFC25827BA5004B229D /* vee_ios_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vee_ios_challengeUITests.swift; sourceTree = "<group>"; };
 		AFA60FFE25827BA5004B229D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA6101925827D57004B229D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		AFA6102325827E31004B229D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,10 @@
 		AFA60FD925827BA2004B229D /* vee-ios-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				AFA6101325827C61004B229D /* Utils */,
+				AFA6101225827C56004B229D /* Views */,
+				AFA6101125827C46004B229D /* ViewModels */,
+				AFA6101025827C3C004B229D /* Models */,
 				AFA60FDA25827BA2004B229D /* AppDelegate.swift */,
 				AFA60FDC25827BA2004B229D /* SceneDelegate.swift */,
 				AFA60FDE25827BA2004B229D /* ViewController.swift */,
@@ -126,6 +134,60 @@
 				AFA60FFE25827BA5004B229D /* Info.plist */,
 			);
 			path = "vee-ios-challengeUITests";
+			sourceTree = "<group>";
+		};
+		AFA6101025827C3C004B229D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AFA6101125827C46004B229D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AFA6101225827C56004B229D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFA6101325827C61004B229D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AFA6102125827E17004B229D /* Extensions */,
+				AFA6101525827D15004B229D /* ApiManager */,
+				AFA6101425827C80004B229D /* Enums */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AFA6101425827C80004B229D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		AFA6101525827D15004B229D /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				AFA6101925827D57004B229D /* ApiManager.swift */,
+			);
+			path = ApiManager;
+			sourceTree = "<group>";
+		};
+		AFA6102125827E17004B229D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFA6102325827E31004B229D /* StringExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +321,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA60FDF25827BA2004B229D /* ViewController.swift in Sources */,
+				AFA6101A25827D57004B229D /* ApiManager.swift in Sources */,
+				AFA6102425827E32004B229D /* StringExtensions.swift in Sources */,
 				AFA60FDB25827BA2004B229D /* AppDelegate.swift in Sources */,
 				AFA60FDD25827BA2004B229D /* SceneDelegate.swift in Sources */,
 			);
