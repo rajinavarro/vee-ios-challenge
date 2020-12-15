@@ -12,12 +12,15 @@ protocol LoadMoreCharactersTableViewCellDelegate: class {
 
     func loadMoreCharacters()
 }
+
 class LoadMoreCharactersTableViewCell: UITableViewCell {
 
-    static let IDENTIFIER = "homeCell"
-    static let NIB_NAME = "HomeTableViewCell"
+    static let IDENTIFIER = "loadMoreCharactersCell"
+    static let NIB_NAME = "LoadMoreCharactersTableViewCell"
 
     weak var delegate: LoadMoreCharactersTableViewCellDelegate?
+    
+    private var viewModel: LoadMoreCharactersTableViewCellViewModel = LoadMoreCharactersTableViewCellViewModel()
 
     @IBOutlet weak var loadMoreBT: UIButton!
 
@@ -30,16 +33,13 @@ class LoadMoreCharactersTableViewCell: UITableViewCell {
     }
 
     /// Configura elementos da celula,
-    func setupLoadMoreTableViewCell() {
-        loadMoreBT.layer.masksToBounds = true
-        loadMoreBT.layer.cornerRadius = 12
-        loadMoreBT.addShadow(color: .black, opacity: 0.4, radius: 2)
+    func setupCell() {
+        self.loadMoreBT = self.viewModel.setupLoadMoreBT(loadMoreBT: loadMoreBT)
     }
 
+    /// Ação de carregar novos personagens.
     @IBAction func loadMoreAction(_ sender: Any) {
-
         self.delegate?.loadMoreCharacters()
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
 
 }

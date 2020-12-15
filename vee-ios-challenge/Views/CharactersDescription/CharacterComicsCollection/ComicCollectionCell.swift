@@ -15,30 +15,31 @@ class ComicCollectionCell: UICollectionViewCell {
     @IBOutlet weak var comicIV: UIImageView!
     @IBOutlet weak var comicLB: UILabel!
 
-    var comic: Comic?
+    var viewModel: ComicCollectionCellViewModel? {
+        didSet{
+            setupCell()
+        }
+    }
 
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
 
     /// Configura dados da ComicCollectionCell
-    func setupCell(comic: Comic) {
-
-        self.comic = comic
+    func setupCell() {
 
         setupComicIV()
         setupComicLB()
     }
 
+    
+    /// Configura imagem do quadrinho.
     func setupComicIV() {
-        if let comicImageURL = self.comic?.thumbnail {
-            self.comicIV.downloadImage(from: comicImageURL)
-        }
+        viewModel?.setupComicIV(comicIV: self.comicIV)
     }
 
+    /// Configura titulo do quadrinho.
     func setupComicLB() {
-        if let comicTitle = self.comic?.title {
-            self.comicLB.text = comicTitle
-        }
+        self.comicLB.text = viewModel?.setupComicLB()
     }
 }

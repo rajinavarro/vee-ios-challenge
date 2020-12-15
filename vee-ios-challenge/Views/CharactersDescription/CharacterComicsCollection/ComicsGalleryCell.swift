@@ -14,7 +14,14 @@ class ComicsGalleryCell: UITableViewCell {
 
     @IBOutlet var comicsGalleryCollectionView: UICollectionView!
 
-    var comics: [Comic]?
+    var viewModel: ComicsGalleryViewModel? {
+        didSet{
+            DispatchQueue.main.async {
+                self.comicsGalleryCollectionView.reloadData()
+            }
+        }
+    }
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,25 +41,20 @@ class ComicsGalleryCell: UITableViewCell {
 extension ComicsGalleryCell: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return comics?.count ?? 0
+        
+        return self.viewModel?.numberOfItemsInSection() ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ComicCollectionCell.IDENTIFIER, for: indexPath) as? ComicCollectionCell,
-           let comic = comics?[indexPath.row] {
-
-            cell.setupCell(comic: comic)
-
-            return cell
-        }
-
-        return UICollectionViewCell()
+        
+        return self.viewModel?.cellForItemAt(collectionView: collectionView, indexPath: indexPath) ?? UICollectionViewCell()
     }
 }
 
 // MARK: UICollectionViewDelegateFlowLayout
 extension ComicsGalleryCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.frame.width * 0.45, height: self.frame.height * 0.7)
+        
+        return self.viewModel?.collectionViewLayout(view: self) ?? CGSize()
     }
 }
