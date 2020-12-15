@@ -1,5 +1,5 @@
 //
-//  CharacterDescriptionContentCell.swift
+//  CharacterDescriptionCell.swift
 //  vee-ios-challenge
 //
 //  Created by raji navarro on 13/12/20.
@@ -9,8 +9,8 @@ import UIKit
 
 class CharacterDescriptionCell: UITableViewCell {
 
-    static let IDENTIFIER = "characterDescriptionContentCell"
-    static let NIB_NAME = "CharacterDescriptionContentCell"
+    static let IDENTIFIER = "characterDescriptionCell"
+    static let NIB_NAME = "CharacterDescriptionCell"
 
     @IBOutlet weak var nameLB: UILabel!
     @IBOutlet weak var lastModificationLB: UILabel!
@@ -31,7 +31,7 @@ class CharacterDescriptionCell: UITableViewCell {
         super.prepareForReuse()
     }
 
-    /// Configura dados da CharacterDescriptionContentCell
+    /// Configura dados da CharacterDescriptionCell
     func setupCell() {
 
         setupCharacterImageIV()

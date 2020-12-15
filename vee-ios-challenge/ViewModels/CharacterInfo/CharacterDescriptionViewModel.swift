@@ -15,7 +15,7 @@ protocol CharacterDescriptionViewModelDelegate: class{
 
 class CharacterDescriptionViewModel{
     
-    weak var delegate: CharacterDescriptionViewModelDelegate?
+    var delegate: CharacterDescriptionViewModelDelegate?
     
     private var comicsService: ComicsService = ComicsService()
     

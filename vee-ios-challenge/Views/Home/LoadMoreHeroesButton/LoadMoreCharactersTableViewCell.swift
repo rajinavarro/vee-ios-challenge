@@ -18,7 +18,7 @@ class LoadMoreCharactersTableViewCell: UITableViewCell {
     static let IDENTIFIER = "loadMoreCharactersCell"
     static let NIB_NAME = "LoadMoreCharactersTableViewCell"
 
-    weak var delegate: LoadMoreCharactersTableViewCellDelegate?
+    var delegate: LoadMoreCharactersTableViewCellDelegate?
     
     private var viewModel: LoadMoreCharactersTableViewCellViewModel = LoadMoreCharactersTableViewCellViewModel()
 
