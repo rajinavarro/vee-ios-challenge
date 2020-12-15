@@ -7,12 +7,10 @@
 
 import UIKit
 
-private let contentViewCellIdentifier = "characterDescriptionContentCell"
-
-private let comicsGalleryCellIdentifier = "comicsGalleryCell"
-
-
 class CharacterDescriptionViewController: UIViewController{
+    
+    static let IDENTIFIER = "characterDescriptionVC"
+    static let STORYBOARD_NAME = "CharacterDescription"
     
     @IBOutlet weak var characterDescriptionTableView: UITableView!
     
@@ -53,14 +51,14 @@ class CharacterDescriptionViewController: UIViewController{
     /// Registra XIB das custom cell utilizadas
     func registerCustomTableViewCell(){
         
-        characterDescriptionTableView.register(UINib(nibName: "CharacterDescriptionContentCell", bundle: nil), forCellReuseIdentifier: contentViewCellIdentifier)
+        characterDescriptionTableView.register(UINib(nibName: CharacterDescriptionContentCell.NIB_NAME, bundle: nil), forCellReuseIdentifier: CharacterDescriptionContentCell.IDENTIFIER)
         
-        characterDescriptionTableView.register(UINib(nibName: "ComicsGalleryCell", bundle: nil), forCellReuseIdentifier: comicsGalleryCellIdentifier)
+        characterDescriptionTableView.register(UINib(nibName: ComicsGalleryCell.NIB_NAME, bundle: nil), forCellReuseIdentifier: ComicsGalleryCell.IDENTIFIER)
     }
     
     func setupDescriptionContentCell() -> UITableViewCell{
         
-        if let contentCell = characterDescriptionTableView.dequeueReusableCell(withIdentifier: contentViewCellIdentifier) as? CharacterDescriptionContentCell,
+        if let contentCell = characterDescriptionTableView.dequeueReusableCell(withIdentifier: CharacterDescriptionContentCell.IDENTIFIER) as? CharacterDescriptionContentCell,
            let character = self.character{
             
             contentCell.setupCell(character: character)
@@ -71,7 +69,7 @@ class CharacterDescriptionViewController: UIViewController{
     }
     
     func setupComicsGalleryCell() -> UITableViewCell{
-        if let comicsCell = characterDescriptionTableView.dequeueReusableCell(withIdentifier: comicsGalleryCellIdentifier) as? ComicsGalleryCell,
+        if let comicsCell = characterDescriptionTableView.dequeueReusableCell(withIdentifier: ComicsGalleryCell.IDENTIFIER) as? ComicsGalleryCell,
            !comics.isEmpty{
             
             comicsCell.comics = comics

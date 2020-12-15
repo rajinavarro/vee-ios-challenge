@@ -7,11 +7,6 @@
 
 import UIKit
 
-//MARK: Identifiers
-private let homeCellIdentifier = "homeCell"
-private let loadMoreCharactersCellIdentifier = "loadMoreCharactersCell"
-private let characterDescriptionViewControllerIdentifier = "characterDescriptionVC"
-
 class HomeViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
@@ -42,14 +37,14 @@ class HomeViewController: UIViewController{
     
     /// Registra celulas cutomizadas utilizadas na tableView
     func registerCustomTableViewCell(){
-        tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: homeCellIdentifier)
-        tableView.register(UINib(nibName: "LoadMoreCharactersTableViewCell", bundle: nil), forCellReuseIdentifier: loadMoreCharactersCellIdentifier)
+        tableView.register(UINib(nibName: HomeTableViewCell.NIB_NAME, bundle: nil), forCellReuseIdentifier: HomeTableViewCell.IDENTIFIER)
+        tableView.register(UINib(nibName: LoadMoreCharactersTableViewCell.NIB_NAME, bundle: nil), forCellReuseIdentifier: LoadMoreCharactersTableViewCell.IDENTIFIER)
     }
     
     
     /// Configura reutilização da celula de carregar novos personagens
     func setupLoadMoreCharactersTableViewCell(indexPath: IndexPath) -> UITableViewCell{
-        if let loadMoreCell = tableView.dequeueReusableCell(withIdentifier: loadMoreCharactersCellIdentifier, for: indexPath) as? LoadMoreCharactersTableViewCell{
+        if let loadMoreCell = tableView.dequeueReusableCell(withIdentifier: LoadMoreCharactersTableViewCell.IDENTIFIER, for: indexPath) as? LoadMoreCharactersTableViewCell{
             
             loadMoreCell.setupLoadMoreTableViewCell()
             loadMoreCell.delegate = self
@@ -63,7 +58,7 @@ class HomeViewController: UIViewController{
     
     /// Configura reutilização da celula dos personagens.
     func setupHomeTableViewCell(indexPath: IndexPath) -> UITableViewCell{
-        if let cell = tableView.dequeueReusableCell(withIdentifier: homeCellIdentifier, for: indexPath) as? HomeTableViewCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.IDENTIFIER, for: indexPath) as? HomeTableViewCell{
             
             cell.setupCell(character: characters[indexPath.row])
             cell.delegate = self
@@ -129,8 +124,8 @@ extension HomeViewController: HomeTableViewCellDelegate{
     /// Ação de ver mais informações de um personagem
     func moreInfoAction(character: Character) {
         
-        let storyboard = UIStoryboard.init(name: "CharacterDescription", bundle: nil)
-        let characterDescriptionVC = storyboard.instantiateViewController(withIdentifier: characterDescriptionViewControllerIdentifier) as? CharacterDescriptionViewController
+        let storyboard = UIStoryboard.init(name: CharacterDescriptionViewController.STORYBOARD_NAME, bundle: nil)
+        let characterDescriptionVC = storyboard.instantiateViewController(withIdentifier: CharacterDescriptionViewController.IDENTIFIER) as? CharacterDescriptionViewController
         
         if let characterDescriptionVC = characterDescriptionVC{
             

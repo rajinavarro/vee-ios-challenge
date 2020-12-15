@@ -9,6 +9,9 @@ import UIKit
 
 class CharacterDescriptionContentCell: UITableViewCell {
 
+    static let IDENTIFIER = "characterDescriptionContentCell"
+    static let NIB_NAME = "CharacterDescriptionContentCell"
+    
     
     var character: Character?
     

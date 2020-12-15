@@ -7,9 +7,10 @@
 
 import UIKit
 
-private let comicCollectionCell = "comicCollectionCell"
-
 class ComicsGalleryCell: UITableViewCell {
+    
+    static let IDENTIFIER = "comicsGalleryCell"
+    static let NIB_NAME = "ComicsGalleryCell"
     
     @IBOutlet var comicsGalleryCollectionView: UICollectionView!
     
@@ -25,7 +26,7 @@ class ComicsGalleryCell: UITableViewCell {
     
     /// Registra celulas customizadas utizadas na ComicsGalleryCell
     func registerCustomCell(){
-        comicsGalleryCollectionView.register(UINib(nibName: "ComicCollectionCell", bundle: nil), forCellWithReuseIdentifier: comicCollectionCell)
+        comicsGalleryCollectionView.register(UINib(nibName: ComicCollectionCell.NIB_NAME, bundle: nil), forCellWithReuseIdentifier: ComicCollectionCell.IDENTIFIER)
     }
 }
 
@@ -38,7 +39,7 @@ extension ComicsGalleryCell: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: comicCollectionCell, for: indexPath) as? ComicCollectionCell,
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ComicCollectionCell.IDENTIFIER, for: indexPath) as? ComicCollectionCell,
            let comic = comics?[indexPath.row]{
             
             cell.setupCell(comic: comic)

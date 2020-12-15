@@ -14,6 +14,9 @@ protocol LoadMoreCharactersTableViewCellDelegate: class{
 }
 class LoadMoreCharactersTableViewCell: UITableViewCell{
     
+    static let IDENTIFIER = "homeCell"
+    static let NIB_NAME = "HomeTableViewCell"
+    
     weak var delegate: LoadMoreCharactersTableViewCellDelegate?
     
     @IBOutlet weak var loadMoreBT: UIButton!

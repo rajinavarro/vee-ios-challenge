@@ -9,6 +9,9 @@ import UIKit
 
 class ComicCollectionCell: UICollectionViewCell{
     
+    static let IDENTIFIER = "comicCollectionCell"
+    static let NIB_NAME = "ComicCollectionCell"
+    
     @IBOutlet weak var comicIV: UIImageView!
     @IBOutlet weak var comicLB: UILabel!
 

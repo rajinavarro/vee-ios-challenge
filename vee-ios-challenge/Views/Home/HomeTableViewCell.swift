@@ -15,6 +15,8 @@ protocol HomeTableViewCellDelegate: class{
 
 class HomeTableViewCell: UITableViewCell{
     
+    static let IDENTIFIER = "homeCell"
+    static let NIB_NAME = "HomeTableViewCell"
     
     @IBOutlet weak var characterImageIV: UIImageView!
     @IBOutlet weak var characterNameLB: UILabel!
