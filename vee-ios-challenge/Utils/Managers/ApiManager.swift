@@ -13,12 +13,13 @@ class ApiManager {
     
     private init() {}
     
-    
+    /// Gera chave da API.
     func createAPIKey(ts: String, publicKey: String = APIKeys.publicKey.rawValue, privateKey: String = APIKeys.privateKey.rawValue)
     -> (String){
+        
         let initialStringHash = ts + privateKey + publicKey
         let finalHash = initialStringHash.md5
-        print(finalHash)
+        
         return finalHash
     }
 }

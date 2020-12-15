@@ -1,26 +1,25 @@
 //
-//  Heroe.swift
+//  Character.swift
 //  vee-ios-challenge
 //
 //  Created by raji navarro on 10/12/20.
 //
 
-//import Foundation
-//
-//struct Character: Codable {
-//    let id: Int
-//    let name, resultDescription: String
-//    let modified: Date
-//    let thumbnail: Thumbnail
-//    let resourceURI: String
-//    let comics, series: Comics
-//    let stories: Stories
-//    let events: Comics
-//    let urls: [URLElement]
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, name
-//        case resultDescription = "description"
-//        case modified, thumbnail, resourceURI, comics, series, stories, events, urls
-//    }
-//}
+import Foundation
+
+struct Character {
+    var id: Int?
+    var name: String?
+    var description: String?
+    var modifiedDate: String?
+    var thumbnail: String?
+    
+    init(args: Dictionary<String, Any>?) {
+        self.id = args?["id"] as? Int
+        self.name = args?["name"] as? String
+        self.modifiedDate = args?["modified"] as? String
+        self.thumbnail = (Thumbnail(args: args?["thumbnail"] as? [String : Any])).fullPath
+        self.description = args?["description"] as? String
+
+    }
+}

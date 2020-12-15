@@ -1,0 +1,6 @@
+framework module Pods_vee_ios_challenge {
+  umbrella header "Pods-vee-ios-challenge-umbrella.h"
+
+  export *
+  module * { export * }
+}

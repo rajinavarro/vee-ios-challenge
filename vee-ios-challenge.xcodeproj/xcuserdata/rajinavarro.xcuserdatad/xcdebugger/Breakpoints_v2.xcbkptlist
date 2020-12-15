@@ -14,40 +14,40 @@
             filePath = "vee-ios-challenge/ViewModels/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "getHeroes(offset:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getCharacters(offset:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9D280475-912E-4BC6-BA79-0E89122FAE3A - 8a80d8554ffd86ff"
+                  uuid = "9D280475-912E-4BC6-BA79-0E89122FAE3A - 31fa6c296136385"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "vee_ios_challenge.HomeViewModel.getHeroes() -&gt; ()"
+                  symbolName = "vee_ios_challenge.HomeViewModel.getHeroes(offset: Swift.Int) -&gt; ()"
                   moduleName = "vee-ios-challenge"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rajinavarro/Documents/Projetos/vee-ios-challenge/vee-ios-challenge/ViewModels/HomeViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "1991">
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1459">
                </Location>
                <Location
-                  uuid = "9D280475-912E-4BC6-BA79-0E89122FAE3A - 2c0d3e1d3181f094"
+                  uuid = "9D280475-912E-4BC6-BA79-0E89122FAE3A - 1b91df332fc6b770"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in vee_ios_challenge.HomeViewModel.getHeroes() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in vee_ios_challenge.HomeViewModel.getHeroes(offset: Swift.Int) -&gt; ()"
                   moduleName = "vee-ios-challenge"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rajinavarro/Documents/Projetos/vee-ios-challenge/vee-ios-challenge/ViewModels/HomeViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "219">
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "244">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "vee-ios-challenge/Views/Home/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "vee-ios-challenge/Utils/Managers/RequestsManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "makeRequest(to:method:completion:)"
             landmarkType = "7">
          </BreakpointContent>
