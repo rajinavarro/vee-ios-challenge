@@ -13,8 +13,8 @@ struct Character {
     var description: String?
     var modifiedDate: String?
     var thumbnail: String?
-    
-    init(args: Dictionary<String, Any>?) {
+
+    init(args: [String: Any]?) {
         self.id = args?["id"] as? Int
         self.name = args?["name"] as? String
         self.modifiedDate = args?["modified"] as? String

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EmptyStateString: String{
+enum EmptyStateString: String {
     case emptyDescription = "This guy is really mysterious, we don't have much information about him. But he seems to be very strong."
     case emptyName = "Mysterious Character"
 }

@@ -8,18 +8,18 @@
 import Foundation
 
 class ApiManager {
-    
+
     static let shared = ApiManager()
-    
+
     private init() {}
-    
+
     /// Gera chave da API.
     func createAPIKey(ts: String, publicKey: String = APIKeys.publicKey.rawValue, privateKey: String = APIKeys.privateKey.rawValue)
-    -> (String){
-        
+    -> (String) {
+
         let initialStringHash = ts + privateKey + publicKey
         let finalHash = initialStringHash.md5
-        
+
         return finalHash
     }
 }

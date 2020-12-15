@@ -11,7 +11,7 @@ struct Comic {
     var id: Int?
     var title: String?
     var thumbnail: String?
-    
+
     init(args: [String:Any]?) {
         self.id = args?["id"] as? Int
         self.title = args?["title"] as? String

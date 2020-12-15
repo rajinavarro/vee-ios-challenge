@@ -7,7 +7,6 @@ target 'vee-ios-challenge' do
 
   # Pods for vee-ios-challenge
   pod 'SDWebImage', '~> 4.0'
-  pod 'SwiftLint'
 
   target 'vee-ios-challengeTests' do
     inherit! :search_paths

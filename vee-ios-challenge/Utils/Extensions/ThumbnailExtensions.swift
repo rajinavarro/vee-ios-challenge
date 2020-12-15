@@ -8,17 +8,17 @@
 import Foundation
 import UIKit
 
-extension Thumbnail{
-    
+extension Thumbnail {
+
     /// Pega o link completo de uma Thumbnail.
     var fullPath: String? {
-        
+
         if let imagePath = self.imagePath,
-           let imageExtension = self.imageExtension{
-            
+           let imageExtension = self.imageExtension {
+
             return imagePath + "." + imageExtension
         }
-        
+
         return ""
     }
 }
